@@ -1,0 +1,21 @@
+Module EmployeeManagment{
+
+	Entity Employee{
+		ShortString Name;
+		Integer VatNumber { Unique; }
+	}
+
+	Entity Manager
+    {
+		ShortString Bonuses;
+        Extends EmployeeManagment.Employee;
+    }
+
+	Entity EducationRecords
+	{
+		Reference Employee {Detail;}
+		Date EducationDate;
+		LongString Description;
+	}
+
+}

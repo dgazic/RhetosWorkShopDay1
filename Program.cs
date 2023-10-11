@@ -26,6 +26,7 @@ builder.Services.AddSwaggerGen(o => o.CustomSchemaIds(type => type.ToString()));
 var app = builder.Build();
 
 app.UseRhetosRestApi();
+ 
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
